@@ -1,5 +1,240 @@
+:root {
+    --acent-color: #333333;
+    --btn-color: #405554;
+    --bs-btn-active-bg: #333333;
+    --bs-btn-active-color: #CBE3E5;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+.navbar-brand {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 8px 20px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    
+    background-color: #333333;
+    &:hover {
+        color: #FFFFFF;
+    }
+}
+
+.active {
+    color: var(--bs-btn-active-color);
+    background-color: var(--bs-btn-active-bg);
+    box-shadow: 1.38889px 1.38889px 5.55556px rgba(48, 48, 56, 0.12);
+}
+
+.btn{
+    &-language {
+        border: none;
+        border-radius: 12px;
+        color: #000;
+
+        &:hover {
+            color: #CBE3E5;
+            background-color: var(--bs-btn-active-bg);
+            box-shadow: 1.38889px 1.38889px 5.55556px rgba(48, 48, 56, 0.12);
+        }
+
+        &:active {
+            color: #CBE3E5;
+            background-color: var(--bs-btn-active-bg);
+            box-shadow: 1.38889px 1.38889px 5.55556px rgba(48, 48, 56, 0.12);
+        }
+    }
+    &__intro {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 10px 0;
+        border-radius: 100px;
+        color: #FFFFFF;
+        background-color: var(--btn-color);
+    }
+    &__workflow {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 10px 0;
+        border-radius: 100px;
+        color: #FFFFFF;
+        background-color: var(--btn-color);
+    }
+}
+
 .intro {
     &__backround {
-        
+        background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);;
+        opacity: 0.81;
+    }
+
+    &__container {
+        margin-top: 60px;
+    }
+
+    &__title {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 130%;
+        &-decore {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 130%;
+
+            margin-right: 10px;
+            padding: 8px 20px;
+            border-radius: 100px;
+            background-color: #FFEC90;
+        }
+    }
+
+    &__text {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        &-decore {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+
+            margin-right: 10px;
+            padding: 8px 20px;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.13);
+            border-radius: 15px;
+            background-color: #FFFFFF;
+            &2 {
+                margin: 0px;
+            }
+        }
+    }
+}
+
+.nav {
+    &-link {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--acent-color);
+        &:hover {
+            color: #000;
+        }
+    }
+}
+
+.partners {
+    &__container {
+        margin-top: 100px;
+    }
+
+    &__title {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    &__button {
+        padding: 10px 10px;
+        background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+        border-radius: 100%;
+    }
+
+    &__item {
+        padding: 10px 20px;
+        border-radius: 35px;
+        background-color: #ECE4C0;
+    }
+}
+
+.workflow {
+    &__container {
+        margin-top: 100px;
+        background-color: #F0F0F0;
+        padding: 50px 0px;
+    }
+    &__title {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+    }
+    &__decore {
+        padding: 10px 15px;
+        background-color: #ECE4C0;
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+        border-radius: 11px;
+    }
+    &__content {
+        margin-top: 30px;
+    }
+}
+
+.whyWe {
+    &__container {
+        margin-top: 100px;
+    }
+    &__title {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+    }
+    &__card {
+        padding: 30px 40px;
+        border-radius: 25px;
+        background-color: #E0E1C3;
+    }
+}
+
+.raffle {
+    &__container {
+        padding: 50px 0px;
+        margin-top: 100px;
+        background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+    }
+    &__title {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 71px;
+        &-sub {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+    &__text {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
     }
 }
