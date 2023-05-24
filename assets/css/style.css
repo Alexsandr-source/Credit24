@@ -8,6 +8,7 @@
 body {
   font-family: "Inter", sans-serif;
   font-family: "Rubik", sans-serif;
+  background-color: #F8F8F8;
 }
 
 .navbar-brand {
@@ -66,6 +67,29 @@ body {
   border-radius: 100px;
   color: #FFFFFF;
   background-color: var(--btn-color);
+}
+.btn__reviews {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #CAD2E1;
+}
+.btn__reviews-active {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn__reviews-active * {
+  font: inherit;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border-radius: 100%;
+  padding: 5px;
+  background: #FFFFFF;
 }
 
 .intro__backround {
@@ -212,4 +236,79 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
+}
+
+.reviews__container {
+  margin-top: 100px;
+}
+.reviews__name {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.reviews__location {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+}
+.reviews__profession {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+}
+.reviews__item {
+  padding: 15px 10px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+}
+.reviews__text {
+  margin: 0px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #D6E2D4;
+}
+
+.using__backround {
+  background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+}
+.using__container {
+  margin-top: 100px;
+  padding: 50px 0px;
+}
+.using__title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+}
+.using__text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.conditions__container {
+  margin-top: 100px;
+  padding: 20px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+  border-radius: 25px;
+  background-color: #FFFFFF;
+}
+.conditions__backround {
+  background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+  border-radius: 25px;
+}
+.conditions__img {
+  width: 20px;
+  height: 20px;
 }

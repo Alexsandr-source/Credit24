@@ -8,6 +8,7 @@
 body {
     font-family: 'Inter', sans-serif;
     font-family: 'Rubik', sans-serif;
+    background-color: #F8F8F8;
 }
 
 .navbar-brand {
@@ -70,6 +71,29 @@ body {
         border-radius: 100px;
         color: #FFFFFF;
         background-color: var(--btn-color);
+    }
+    &__reviews {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: #CAD2E1;
+        &-active {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & * {
+                font: inherit;
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                border-radius: 100%;
+                padding: 5px;
+                background: #FFFFFF;
+            }
+        }
     }
 }
 
@@ -236,5 +260,87 @@ body {
         font-weight: 400;
         font-size: 15px;
         line-height: 18px;
+    }
+}
+
+.reviews {
+    &__container {
+        margin-top: 100px;
+    }
+    &__name{
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__location {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    &__profession {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 15px;
+
+    }
+    &__item {
+        padding: 15px 10px;
+        border-radius: 15px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+    }
+    &__text {
+        margin: 0px;
+        padding: 10px 20px;
+        border-radius: 15px;
+        background-color: #D6E2D4;
+    }
+}
+
+.using {
+    &__backround {
+        background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);;
+    }
+    &__container {
+        margin-top: 100px;
+        padding: 50px 0px;
+    }
+    &__title {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 47px;
+    }
+    &__text {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 140%;
+    }
+} 
+
+.conditions {
+    &__container {
+        margin-top: 100px;
+        padding: 20px;
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+        border-radius: 25px;
+        background-color: #FFFFFF;
+    }
+    &__backround {
+        background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+        border-radius: 25px;
+    }
+    &__img {
+        width: 20px;
+        height: 20px;
     }
 }
