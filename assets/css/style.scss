@@ -95,6 +95,37 @@ body {
             }
         }
     }
+    &__questionsAnswers {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+
+        background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+        border-radius: 15px;
+    }
+    &__footer {
+        padding: 8px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        &-active {
+            color: var(--acent-color);
+            background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+            border-radius: 10px;
+        }
+        &:hover {
+            color: var(--acent-color);
+            background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+            border-radius: 10px;
+        }
+    }
 }
 
 .intro {
@@ -342,5 +373,72 @@ body {
     &__img {
         width: 20px;
         height: 20px;
+    }
+}
+
+.questionsAnswers {
+    &__container {
+        margin-top: 100px;
+    }
+    &__item {
+        background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+        border-radius: 25px;
+    }
+    &__text {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.footer {
+    &__backround {
+        background-color: #333333;
+    }
+    &__container {
+        margin-top: 100px;
+        padding-top: 80px;
+    }
+    &__brand {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+
+        padding: 8px 20px;
+        border-radius: 15px;
+        text-decoration: none;
+        color: var(--acent-color);
+        background-color: #FFFFFF;
+    }
+    &__number {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        color: #FFFFFF;
+    }
+    &__link {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    &__text {
+        margin-top: 100px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: #FFFFFF;
     }
 }
