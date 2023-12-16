@@ -20,4 +20,4 @@ function changesLanguage() {
     }
 };
 
-daysLost.
+// daysLost.
