@@ -170,6 +170,12 @@ body {
   margin: 0px;
 }
 
+@media (min-width: 992px) {
+  .navbar-collapse .navbar-collapse {
+    display: none;
+  }
+}
+
 .nav-link {
   font-family: "Rubik";
   font-style: normal;

@@ -11,6 +11,7 @@ body {
     background-color: #F8F8F8;
 }
 
+
 .navbar-brand {
     font-style: normal;
     font-weight: 500;
@@ -179,6 +180,14 @@ body {
             &2 {
                 margin: 0px;
             }
+        }
+    }
+}
+
+.navbar-collapse {
+    @media (min-width: 992px) {
+        .navbar-collapse {
+            display: none;
         }
     }
 }
