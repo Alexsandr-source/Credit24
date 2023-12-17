@@ -1,10 +1,6 @@
 const changeLanguage = document.querySelectorAll('.btn-language');
 const languageRu = document.querySelector('#languageRu');
 const languageEn = document.querySelector('#languageEn');
-let daysLost = new Date().getDate();
-let hoursLost = new Date().getHours();
-let minutsLost = new Date().getMinutes();
-let secondsLost = new Date().getSeconds();
 
 // OUR SERVICES button //
 // Set event handlers for buttons
@@ -23,31 +19,35 @@ function changesLanguage() {
 };
 
 //PROMOTIONAL RATE
-const setDays = setInterval(function seconds() {
+let daysLost = 0;
+let hoursLost = 23;
+let minutsLost = 59;
+let secondsLost = 59;
+setTimeout(setDays = setInterval(function() {
     if (daysLost == -1) {
-        clearInterval(daysLost);
+        clearInterval(setDays);
     } else {
         document.querySelector('#daysLost').innerHTML = daysLost--;
     }
-}, 86400000)
+}, 86400000), 1000)
 
-const setHours = setInterval(function seconds() {
+setTimeout(setHours = setInterval(function() {
     if (hoursLost == -1) {
-        clearInterval(hoursLost);
+        clearInterval(setHours);
     } else {
         document.querySelector('#hoursLost').innerHTML = hoursLost--;
     }
-}, 3600000)
+}, 3600000), 1000)
 
-const setMinuts = setInterval(function seconds() {
+setTimeout(setMinuts = setInterval(function() {
     if (minutsLost == -1) {
-        clearInterval(minutsLost);
+        clearInterval(setMinuts);
     } else {
         document.querySelector('#minutsLost').innerHTML = minutsLost--;
     }
-}, 60000)
+}, 60000), 1000)
 
-const setSeconds = setInterval(function seconds() {
+const setSeconds = setInterval(function() {
     if (secondsLost == -1) {
         clearInterval(setSeconds);
     } else {
