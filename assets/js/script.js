@@ -1,10 +1,10 @@
 const changeLanguage = document.querySelectorAll('.btn-language');
 const languageRu = document.querySelector('#languageRu');
 const languageEn = document.querySelector('#languageEn');
-// let daysLost = document.querySelector('#daysLost').innerHTML = new Date().getDate();
-// let hoursLost = document.querySelector('#hoursLost').innerHTML = new Date().getHours();
-// let minutsLost = document.querySelector('#minutsLost').innerHTML = new Date().getMinutes();
-// let secondsLost = document.querySelector('#secondsLost').innerHTML = new Date().getSeconds();
+let daysLost = new Date().getDate();
+let hoursLost = new Date().getHours();
+let minutsLost = new Date().getMinutes();
+let secondsLost = new Date().getSeconds();
 
 // OUR SERVICES button //
 // Set event handlers for buttons
@@ -23,15 +23,35 @@ function changesLanguage() {
 };
 
 //PROMOTIONAL RATE
-let secondsLost = new Date().getSeconds();
-function seconds() {
-    console.log(secondsLost);
+const setDays = setInterval(function seconds() {
+    if (daysLost == -1) {
+        clearInterval(daysLost);
+    } else {
+        document.querySelector('#daysLost').innerHTML = daysLost--;
+    }
+}, 86400000)
+
+const setHours = setInterval(function seconds() {
+    if (hoursLost == -1) {
+        clearInterval(hoursLost);
+    } else {
+        document.querySelector('#hoursLost').innerHTML = hoursLost--;
+    }
+}, 3600000)
+
+const setMinuts = setInterval(function seconds() {
+    if (minutsLost == -1) {
+        clearInterval(minutsLost);
+    } else {
+        document.querySelector('#minutsLost').innerHTML = minutsLost--;
+    }
+}, 60000)
+
+const setSeconds = setInterval(function seconds() {
     if (secondsLost == -1) {
         clearInterval(setSeconds);
     } else {
         document.querySelector('#secondsLost').innerHTML = secondsLost--;
     }
-}
-
-const setSeconds = setInterval(seconds, 1000)
+}, 1000)
 
