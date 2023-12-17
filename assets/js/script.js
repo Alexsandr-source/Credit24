@@ -29,7 +29,7 @@ setTimeout(setDays = setInterval(function() {
     } else {
         document.querySelector('#daysLost').innerHTML = daysLost--;
     }
-}, 86400000), 1000)
+}, 86300000), 1000)
 
 setTimeout(setHours = setInterval(function() {
     if (hoursLost == -1) {
@@ -37,7 +37,7 @@ setTimeout(setHours = setInterval(function() {
     } else {
         document.querySelector('#hoursLost').innerHTML = hoursLost--;
     }
-}, 3600000), 1000)
+}, 3590000), 1000)
 
 setTimeout(setMinuts = setInterval(function() {
     if (minutsLost == -1) {
@@ -45,7 +45,7 @@ setTimeout(setMinuts = setInterval(function() {
     } else {
         document.querySelector('#minutsLost').innerHTML = minutsLost--;
     }
-}, 60000), 1000)
+}, 59000), 1000)
 
 const setSeconds = setInterval(function() {
     if (secondsLost == -1) {
