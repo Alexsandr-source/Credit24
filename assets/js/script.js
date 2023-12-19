@@ -19,39 +19,46 @@ function changesLanguage() {
 };
 
 //PROMOTIONAL RATE
-let daysLost = 0;
 let hoursLost = 23;
 let minutsLost = 59;
 let secondsLost = 59;
-setTimeout(setDays = setInterval(function() {
-    if (daysLost == -1) {
-        clearInterval(setDays);
-    } else {
-        document.querySelector('#daysLost').innerHTML = daysLost--;
-    }
-}, 86300000), 1000)
 
-setTimeout(setHours = setInterval(function() {
+function hours() {
     if (hoursLost == -1) {
         clearInterval(setHours);
     } else {
         document.querySelector('#hoursLost').innerHTML = hoursLost--;
     }
-}, 3590000), 1000)
+}
 
-setTimeout(setMinuts = setInterval(function() {
+function minuts() {
+    minutsLost = minutsLost < 10 ? "0" + minutsLost : minutsLost;
     if (minutsLost == -1) {
-        clearInterval(setMinuts);
+        minutsLost = 60
+    }else if(minutsLost == -1 && hoursLost == -1) {
+        
     } else {
         document.querySelector('#minutsLost').innerHTML = minutsLost--;
     }
-}, 59000), 1000)
+}
 
-const setSeconds = setInterval(function() {
+const seconds = setInterval(function() {
     if (secondsLost == -1) {
-        clearInterval(setSeconds);
+        secondsLost = 60;
+    }else if(secondsLost == -1 && hoursLost == -1) {
+        clearInterval(seconds);
     } else {
         document.querySelector('#secondsLost').innerHTML = secondsLost--;
     }
 }, 1000)
 
+// setInterval(updateCountndown, 1000);
+// let time = 3600;
+// function updateCountndown() {
+//     const minutes = Math.floor(time / 60 / 60);
+//     let seconds = time % 60;
+//     seconds = seconds < 10 ? "0" + seconds : seconds;
+//     document.querySelector('#secondsLost').innerHTML = seconds;
+//     document.querySelector('#minutsLost').innerHTML = minutes;
+//     time--;
+// }
