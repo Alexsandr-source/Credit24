@@ -203,6 +203,10 @@ body {
   background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
   border-radius: 100%;
 }
+.partners__slide {
+  display: flex;
+  gap: 5vmax;
+}
 .partners__item {
   padding: 10px 20px;
   border-radius: 35px;

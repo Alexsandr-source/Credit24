@@ -1,12 +1,17 @@
 const changeLanguage = document.querySelectorAll('.btn-language');
 const languageRu = document.querySelector('#languageRu');
 const languageEn = document.querySelector('#languageEn');
+const prevPartners = document.querySelector('#prevPartners');
+const nextPartners = document.querySelector('#nextPartners');
+const partnersSlider = document.querySelector('.partners__slider-line');
+const partnersSlides = Array.from(partnersSlider.querySelectorAll('.partners__slide'));
+let partnersCount = partnersSlides.length;
+let partnersIndex = 0;
+console.log(partnersCount);
 
-// OUR SERVICES button //
-// Set event handlers for buttons
+// changes button //
 languageRu.addEventListener('click', changesLanguage);
 languageEn.addEventListener('click', changesLanguage);
-// Function for updating the buttons
 function changesLanguage() {
     for(var i = 0; i < changeLanguage.length; i++) {
         changeLanguage[i].classList.remove('active');
@@ -17,7 +22,6 @@ function changesLanguage() {
         this.classList.add('active');
     }
 };
-
 //PROMOTIONAL RATE
 setInterval(updateCountndown, 1000);
 let time = 86400;
@@ -36,3 +40,29 @@ function updateCountndown() {
     document.querySelector('#daysLost').innerHTML = daysLost;
     time--;
 }
+
+//sliderPartners
+prevPartners.addEventListener('click', prevPartnersSlide);
+nextPartners.addEventListener('click', nextPartnersSlide);
+
+function prevPartnersSlide() {
+    partnersIndex = (partnersIndex - 1 + partnersCount) % partnersCount;
+    updatePartner();
+}
+
+function nextPartnersSlide() {
+    partnersIndex = (partnersIndex + 1) % partnersCount;
+    updatePartner();
+}
+
+function updatePartner() {
+    partnersSlides.forEach((slide, index) => {
+    if (index === partnersIndex) {
+        slide.style.display = 'flex';
+    } else {
+        slide.style.display = 'none';
+    }
+});
+}
+
+updatePartner();
