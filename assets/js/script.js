@@ -19,46 +19,20 @@ function changesLanguage() {
 };
 
 //PROMOTIONAL RATE
-let hoursLost = 23;
-let minutsLost = 59;
-let secondsLost = 59;
-
-function hours() {
-    if (hoursLost == -1) {
-        clearInterval(setHours);
-    } else {
-        document.querySelector('#hoursLost').innerHTML = hoursLost--;
-    }
-}
-
-function minuts() {
+setInterval(updateCountndown, 1000);
+let time = 86400;
+function updateCountndown() {
+    let secondsLost = time % 60;
+    let minutsLost = Math.floor(time / 60) % 60;
+    let hoursLost = Math.floor(time / 60 / 60);
+    let daysLost = Math.floor(time / 60 / 60 / 24);
+    secondsLost = secondsLost < 10 ? "0" + secondsLost : secondsLost;
     minutsLost = minutsLost < 10 ? "0" + minutsLost : minutsLost;
-    if (minutsLost == -1) {
-        minutsLost = 60
-    }else if(minutsLost == -1 && hoursLost == -1) {
-        
-    } else {
-        document.querySelector('#minutsLost').innerHTML = minutsLost--;
-    }
+    hoursLost = hoursLost < 10 ? "0" + hoursLost : hoursLost;
+    daysLost = daysLost < 10 ? "0" + daysLost : daysLost;
+    document.querySelector('#secondsLost').innerHTML = secondsLost;
+    document.querySelector('#minutsLost').innerHTML = minutsLost;
+    document.querySelector('#hoursLost').innerHTML = hoursLost;
+    document.querySelector('#daysLost').innerHTML = daysLost;
+    time--;
 }
-
-const seconds = setInterval(function() {
-    if (secondsLost == -1) {
-        secondsLost = 60;
-    }else if(secondsLost == -1 && hoursLost == -1) {
-        clearInterval(seconds);
-    } else {
-        document.querySelector('#secondsLost').innerHTML = secondsLost--;
-    }
-}, 1000)
-
-// setInterval(updateCountndown, 1000);
-// let time = 3600;
-// function updateCountndown() {
-//     const minutes = Math.floor(time / 60 / 60);
-//     let seconds = time % 60;
-//     seconds = seconds < 10 ? "0" + seconds : seconds;
-//     document.querySelector('#secondsLost').innerHTML = seconds;
-//     document.querySelector('#minutsLost').innerHTML = minutes;
-//     time--;
-// }
