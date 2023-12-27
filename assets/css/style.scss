@@ -73,29 +73,6 @@ body {
         color: #FFFFFF;
         background-color: var(--btn-color);
     }
-    &__reviews {
-        width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        background: #CAD2E1;
-        &-active {
-            width: 20px;
-            height: 20px;
-            background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
-            border-radius: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            & * {
-                font: inherit;
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-                border-radius: 100%;
-                padding: 5px;
-                background: #FFFFFF;
-            }
-        }
-    }
     &__questionsAnswers {
         font-family: 'Rubik';
         font-style: normal;
@@ -339,6 +316,36 @@ body {
         border-radius: 15px;
         background-color: #FFFFFF;
         box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+    }
+    &__slide {
+        display: flex;
+        align-items: center;
+    }
+    &__btn {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: #CAD2E1;
+        &-active {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & * {
+                font: inherit;
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                border-radius: 100%;
+                padding: 5px;
+                background: #FFFFFF;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
     }
     &__text {
         margin: 0px;

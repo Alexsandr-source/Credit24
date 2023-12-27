@@ -68,29 +68,6 @@ body {
   color: #FFFFFF;
   background-color: var(--btn-color);
 }
-.btn__reviews {
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background: #CAD2E1;
-}
-.btn__reviews-active {
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn__reviews-active * {
-  font: inherit;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  border-radius: 100%;
-  padding: 5px;
-  background: #FFFFFF;
-}
 .btn__questionsAnswers {
   font-family: "Rubik";
   font-style: normal;
@@ -307,6 +284,36 @@ body {
   border-radius: 15px;
   background-color: #FFFFFF;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+}
+.reviews__slide {
+  display: flex;
+  align-items: center;
+}
+.reviews__btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #CAD2E1;
+}
+.reviews__btn-active {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(87.36deg, #CBE3E5 -1.98%, #F2DEA3 102.92%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reviews__btn-active * {
+  font: inherit;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border-radius: 100%;
+  padding: 5px;
+  background: #FFFFFF;
+}
+.reviews__btn:hover {
+  cursor: pointer;
 }
 .reviews__text {
   margin: 0px;
