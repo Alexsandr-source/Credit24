@@ -1,6 +1,9 @@
 const changeLanguage = document.querySelectorAll('.btn-language');
+const changeLanguage2 = document.querySelectorAll('.btn__footer');
 const languageRu = document.querySelector('#languageRu');
 const languageEn = document.querySelector('#languageEn');
+const languageRu2 = document.querySelector('#languageRu2');
+const languageEn2 = document.querySelector('#languageEn2');
 const prevPartners = document.querySelector('#prevPartners');
 const nextPartners = document.querySelector('#nextPartners');
 const prevReviews = document.querySelector('#prevReviews');
@@ -22,6 +25,8 @@ let wrapperIndex = 0;
 // Language //
 languageRu.addEventListener('click', changesLanguage);
 languageEn.addEventListener('click', changesLanguage);
+languageRu2.addEventListener('click', changesLanguage2);
+languageEn2.addEventListener('click', changesLanguage2);
 function changesLanguage() {
     for(var i = 0; i < changeLanguage.length; ++i) {
         changeLanguage[i].classList.remove('active');
@@ -30,6 +35,16 @@ function changesLanguage() {
         this.classList.remove('active')
     } else {
         this.classList.add('active');
+    }
+};
+function changesLanguage2() {
+    for(var i = 0; i < changeLanguage2.length; ++i) {
+        changeLanguage2[i].classList.remove('btn__footer-active');
+    }
+    if (this.className === ('btn__footer btn__footer-active')) {
+        this.classList.remove('btn__footer-active')
+    } else {
+        this.classList.add('btn__footer-active');
     }
 };
 //PROMOTIONAL RATE

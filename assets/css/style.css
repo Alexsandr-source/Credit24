@@ -41,11 +41,6 @@ body {
   background-color: var(--bs-btn-active-bg);
   box-shadow: 1.38889px 1.38889px 5.55556px rgba(48, 48, 56, 0.12);
 }
-.btn-language:active {
-  color: #CBE3E5;
-  background-color: var(--bs-btn-active-bg);
-  box-shadow: 1.38889px 1.38889px 5.55556px rgba(48, 48, 56, 0.12);
-}
 .btn__intro {
   font-family: "Rubik";
   font-style: normal;
