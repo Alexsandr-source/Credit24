@@ -110,4 +110,5 @@ function updateWrapper() {
         })
     })
 }
+updateWrapper();
 updateReviews();
