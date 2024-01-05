@@ -50,7 +50,6 @@ function updateCountndown() {
     document.querySelector('#daysLost').innerHTML = daysLost;
     time--;
 }
-
 //Partners
 prevPartners.addEventListener('click', prevPartnersSlide);
 nextPartners.addEventListener('click', nextPartnersSlide);
@@ -72,7 +71,6 @@ function updatePartner() {
 });
 }
 updatePartner();
-
 //Reviews
 prevReviews.addEventListener('click', prevReviewsSlide);
 nextReviews.addEventListener('click', nextReviewsSlide);
@@ -97,15 +95,6 @@ function updateReviews() {
         }
     });
 }
-updateReviews();
-
-reviewsWrappers.forEach((wrapper, index) => {
-    wrapper.addEventListener('click', () => {
-        reviewsIndex = index;
-        updateReviews();
-    })
-})
-
 function updateWrapper() {
     reviewsWrappers.forEach((wrapper, index) => {
         if (index === wrapperIndex) {
@@ -114,4 +103,11 @@ function updateWrapper() {
             wrapper.classList.remove('reviews__btn-active')
         }
     });
+    reviewsWrappers.forEach((wrapper, index) => {
+        wrapper.addEventListener('click', () => {
+            reviewsIndex = index;
+            updateReviews();
+        })
+    })
 }
+updateReviews();
