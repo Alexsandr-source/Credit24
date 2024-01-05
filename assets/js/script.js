@@ -78,13 +78,13 @@ prevReviews.addEventListener('click', prevReviewsSlide);
 nextReviews.addEventListener('click', nextReviewsSlide);
 function prevReviewsSlide() {
     reviewsIndex = (--reviewsIndex + reviewsCount) % reviewsCount;
-    --wrapperIndex
+    wrapperIndex = (--wrapperIndex + wrapperCount) % wrapperCount;
     updateWrapper(wrapperIndex)
     updateReviews();
 }
 function nextReviewsSlide() {
     reviewsIndex = (++reviewsIndex) % reviewsCount;
-    ++wrapperIndex
+    wrapperIndex = (++wrapperIndex) % wrapperCount;
     updateWrapper(wrapperIndex)
     updateReviews();
 }
@@ -106,9 +106,12 @@ reviewsWrappers.forEach((wrapper, index) => {
     })
 })
 
-const updateWrapper = (index) => {
-    for (let wrapper in reviewsWrappers) {
-        wrapper.classList.remove('reviews__btn-active')
-    }
-    reviewsWrappers[index].classList.add('reviews__btn-active')
+function updateWrapper() {
+    reviewsWrappers.forEach((wrapper, index) => {
+        if (index === wrapperIndex) {
+            wrapper.classList.add('reviews__btn-active')
+        } else {
+            wrapper.classList.remove('reviews__btn-active')
+        }
+    });
 }
