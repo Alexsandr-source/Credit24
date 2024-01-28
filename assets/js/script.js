@@ -19,8 +19,8 @@ let partnersCount = partnersSlides.length;
 let partnersIndex = 0;
 let reviewsCount = reviewsSlides.length;
 let reviewsIndex = 0;
-let wrapperCount = reviewsWrappers.length;
-let wrapperIndex = 0;
+let wrapperCount = reviewsCount;
+let wrapperIndex = reviewsIndex;
 
 // Language //
 languageRu.addEventListener('click', changesLanguage);
@@ -110,20 +110,18 @@ function updateReviews() {
         }
     });
 }
-function updateWrapper() {
-    reviewsWrappers.forEach((wrapper, index) => {
-        if (index === wrapperIndex) {
-            wrapper.classList.add('reviews__btn-active')
-        } else {
-            wrapper.classList.remove('reviews__btn-active')
-        }
-    });
-    reviewsWrappers.forEach((wrapper, index) => {
-        wrapper.addEventListener('click', () => {
-            reviewsIndex = index;
-            updateReviews();
-        })
-    })
+const updateWrapper = (index) => {
+    for (let wrapper of reviewsWrappers) {
+        wrapper.classList.remove('reviews__btn-active')
+    }
+    reviewsWrappers[reviewsIndex].classList.add('reviews__btn-active')
 }
+reviewsWrappers.forEach((wrapper, index) => {
+    wrapper.addEventListener('click', () => {
+        reviewsIndex = index;
+        updateWrapper(reviewsIndex)
+        updateReviews();
+    })
+})
 updateWrapper();
 updateReviews();
